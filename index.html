@@ -1,0 +1,80 @@
+<!doctype html>
+<head>
+  <title>Foo</title>
+  <link rel="stylesheet" href="style.css" media="all" />
+  <link href="prism.css" rel="stylesheet" />
+</head>
+<body>
+  <div class="wrapper">
+    <h1>CSS Flexbox Text Ellipsis</h1>
+    <div class="container">
+      <p>Use:
+      <code class="language-css">min-width: 0</code> +
+      <code class="language-css">text-overflow: ellipsis</code> +
+      <code class="language-css">white-space: nowrap</code> +
+      </p>
+      <div class="room animate" onmouseover="stop()" style="height: 50px">
+        <div class="target">
+          <div class="target-title">
+            Text here is very very long that it might get truncate if this box
+            get resized too small
+          </div>
+          <div class="target-button">
+            Button
+          </div>
+        </div>
+      </div>
+      <p>
+      Try resize the box bellow
+      </p>
+    </div>
+  </div>
+  <h2>Full source</h2>
+  <div class="code">
+    <pre>
+HTML:
+<code class="language-markup">
+  &lt;div class="target">
+    &lt;div class="target-title">
+      Text here is very very long that it might
+      get truncate if this box get resized too small
+    &lt;/div>
+    &lt;div class="target-button">
+      Button
+    &lt;/div>
+  &lt;/div>
+</code>
+    </pre>
+    <pre>
+CSS:
+<code class="language-css">
+  .target {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .target-title {
+    overflow: hidden;
+    padding: 5px;
+    min-width: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .target-button {
+    padding: 5px 10px;
+    background: #2196F3;
+    color: white;
+  }
+</code>
+    </pre>
+  </div>
+  <script src="prism.js"></script>
+  <script>
+    function stop() {
+      document.querySelector('.room').classList.remove('animate');
+    }
+  </script>
+</body>
