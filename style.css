@@ -12,6 +12,10 @@
   }
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -23,8 +27,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 h1, h2 {
-  font-weight: 300;
   text-align: center;
+  font-weight: 300;
 }
 h1 {
   margin-bottom: 50px;
@@ -35,6 +39,7 @@ h1 {
 }
 .container {
   margin: 0 auto;
+  margin: 0 10px;
   padding: 10px;
   max-width: 900px;
   border-radius: 10px;
@@ -100,4 +105,12 @@ h1 {
   width: 50%;
   border-right: 1px solid #ccc;
 }
+@media screen and (max-width:768px) {
+  .code {
+    display: block;
+  }
+
+  .code pre {
+    width: 100% !important;
+  }
 }
