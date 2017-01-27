@@ -35,11 +35,10 @@ h1 {
   font-size: 40px;
 }
 .wrapper {
-  padding: 5% 0;
+  padding: 5% 10px;
 }
 .container {
   margin: 0 auto;
-  margin: 0 10px;
   padding: 10px;
   max-width: 900px;
   border-radius: 10px;
